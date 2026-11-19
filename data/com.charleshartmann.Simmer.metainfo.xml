@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.charleshartmann.Simmer</id>
+  <name>Simmer</name>
+  <summary>Your recipes, a hands-free cook mode and a shopping list</summary>
+  <description>
+    <p>
+      Simmer is a recipe box and kitchen companion made for Luma. Bring in recipes from almost any cooking site
+      with a link, paste them from a message, or write your own. Then cook one big step at a time, with the
+      timers already in the steps. It fits a computer, a tablet on the counter, a phone and the kitchen TV.
+    </p>
+    <ul>
+      <li>Import from a link: ingredients, steps, times and the picture, without the ads and life stories</li>
+      <li>Cook mode: one step at a time in large type, with the screen kept on, and the ingredients each step uses</li>
+      <li>Timers that start from the step itself ("simmer for 20 minutes"), several at once, ringing out loud</li>
+      <li>Scale any recipe to the number of people you're feeding, with amounts written the way cooks write them</li>
+      <li>A shopping list sorted by aisle that ticks off as you shop</li>
+      <li>Favorites, tags, search by ingredient, and "Surprise me" for when you can't decide</li>
+      <li>Community: browse and save recipes other Simmer cooks shared, and share your own</li>
+      <li>Back up your recipes to a file and bring them anywhere</li>
+    </ul>
+    <p>
+      The Simmer community is text only (no pictures, no links). Every shared recipe is checked automatically before
+      anyone sees it, and a recipe that people report is hidden. There are no accounts: sharing asks only for an
+      optional display name.
+    </p>
+    <p>
+      Simmer is free, with no ads. Simmer Plus is an optional purchase (a monthly or yearly subscription, or a
+      one-time unlock, paid through Stripe) that adds the meal planner, the smart shopping list for the week,
+      metric and US unit conversion, and the cooking log. Everything above stays free.
+    </p>
+  </description>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="com.charleshartmann">
+    <name>Hartmann Studios</name>
+  </developer>
+  <url type="homepage">https://github.com/chartmann1590/simmer</url>
+  <url type="help">https://github.com/chartmann1590/simmer#readme</url>
+  <url type="bugtracker">https://github.com/chartmann1590/simmer/issues</url>
+  <url type="vcs-browser">https://github.com/chartmann1590/simmer</url>
+  <launchable type="desktop-id">com.charleshartmann.Simmer.desktop</launchable>
+  <provides>
+    <binary>run-app</binary>
+  </provides>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <keywords>
+    <keyword>recipe</keyword>
+    <keyword>recipes</keyword>
+    <keyword>cooking</keyword>
+    <keyword>meal planner</keyword>
+    <keyword>shopping list</keyword>
+    <keyword>kitchen timer</keyword>
+  </keywords>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Your recipe box</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/recipes.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>A recipe, scaled, with timers in its steps</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/recipe.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Cook mode: one step at a time</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/cook.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The shopping list, sorted by aisle</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/shopping.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>On a tablet: the week's plan</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/tablet.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>On a phone: a recipe</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/phone.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>On a TV: cook mode across the kitchen</caption>
+      <image>https://raw.githubusercontent.com/chartmann1590/simmer/main/screenshots/tv.png</image>
+    </screenshot>
+  </screenshots>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <recommends>
+    <internet>offline-only</internet>
+  </recommends>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </supports>
+  <custom>
+    <value key="org.projectluma.ApplicationContract">0.2</value>
+  </custom>
+  <releases>
+    <release version="1.0.0" date="2026-11-19">
+      <description>
+        <p>The first release: import from a link or pasted text, cook mode with step timers, scaling, the shopping list, favorites and tags, the community, and Simmer Plus (meal planner, smart shopping list, unit conversion and the cooking log).</p>
+      </description>
+    </release>
+  </releases>
+  <content_rating type="oars-1.1">
+    <content_attribute id="social-chat">mild</content_attribute>
+    <content_attribute id="money-purchasing">mild</content_attribute>
+  </content_rating>
+</component>

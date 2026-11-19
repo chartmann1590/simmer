@@ -1,0 +1,15 @@
+name = "simmer-community"
+main = "src/index.mjs"
+compatibility_date = "2025-06-01"
+workers_dev = true
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "simmer-community"
+database_id = "REPLACED_BY_DEPLOY_SH"
+
+[observability]
+enabled = true

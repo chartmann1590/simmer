@@ -1,0 +1,36 @@
+name: Bug report
+description: Something doesn't work the way it should
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Recipe address
+      description: If a recipe didn't import right, the page's address helps most.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where?
+      options: [Importing a recipe, Cook mode or timers, Scaling or units, Shopping list, Meal planner, Community, Simmer Plus, Backup, Other]
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      options: [Computer, Tablet, Phone]
+  - type: input
+    id: version
+    attributes:
+      label: Simmer version
+      placeholder: "1.1.0"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots
+      description: Attach a screenshot if it shows the problem. Leave out anything private.

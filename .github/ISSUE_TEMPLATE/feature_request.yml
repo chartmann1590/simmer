@@ -1,0 +1,11 @@
+name: Idea
+description: Suggest something Simmer could do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to do?
+      description: Describe what you're trying to get done, not only the feature.
+    validations:
+      required: true

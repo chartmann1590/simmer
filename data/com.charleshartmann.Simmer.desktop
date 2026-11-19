@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Name=Simmer
+GenericName=Recipes
+Comment=Your recipes, a hands-free cook mode, timers and a shopping list
+Exec=run-app
+Icon=com.charleshartmann.Simmer
+Terminal=false
+DBusActivatable=false
+StartupNotify=true
+Categories=Utility;
+Keywords=recipe;recipes;cooking;cook;kitchen;food;meal;planner;shopping;grocery;timer;
+X-Purism-FormFactor=Workstation;Mobile;
+X-Luma-TV=true
+X-Luma-TV-Tile=com.charleshartmann.Simmer-tv
+X-Luma-TV-Presentation=fullscreen

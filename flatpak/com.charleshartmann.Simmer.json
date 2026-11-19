@@ -1,0 +1,38 @@
+{
+  "id": "com.charleshartmann.Simmer",
+  "runtime": "org.projectluma.Platform",
+  "runtime-version": "44",
+  "sdk": "org.projectluma.Sdk",
+  "command": "run-app",
+  "finish-args": [
+    "--share=ipc",
+    "--share=network",
+    "--socket=wayland",
+    "--socket=fallback-x11",
+    "--socket=pulseaudio",
+    "--device=dri"
+  ],
+  "modules": [
+    {
+      "name": "simmer",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm755 run-app /app/bin/run-app",
+        "install -Dm644 src/main.py /app/share/com.charleshartmann.Simmer/main.py",
+        "install -d /app/share/com.charleshartmann.Simmer/simmer",
+        "install -Dm644 src/simmer/*.py src/simmer/*.css -t /app/share/com.charleshartmann.Simmer/simmer/",
+        "install -Dm644 data/com.charleshartmann.Simmer.desktop /app/share/applications/com.charleshartmann.Simmer.desktop",
+        "install -Dm644 data/com.charleshartmann.Simmer.metainfo.xml /app/share/metainfo/com.charleshartmann.Simmer.metainfo.xml",
+        "install -Dm644 data/com.charleshartmann.Simmer.svg /app/share/icons/hicolor/scalable/apps/com.charleshartmann.Simmer.svg",
+        "install -Dm644 data/com.charleshartmann.Simmer-tv.svg /app/share/luma-tv/com.charleshartmann.Simmer-tv.svg"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://github.com/chartmann1590/simmer.git",
+          "commit": "PINNED_AFTER_FIRST_PUSH"
+        }
+      ]
+    }
+  ]
+}

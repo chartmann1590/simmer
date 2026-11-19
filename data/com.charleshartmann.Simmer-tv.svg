@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+<!-- The TV tile of the app icon: the same plate, art and rim on a 16:9 plate, the art centred at 1.15x. -->
+<defs>
+<linearGradient id="smr-pl" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#9ad36a"/><stop offset="1" stop-color="#23946b"/></linearGradient>
+<radialGradient id="smr-plh" cx="0.26" cy="0.12" r="0.8"><stop offset="0" stop-color="#fff" stop-opacity="0.24"/><stop offset="0.55" stop-color="#fff" stop-opacity="0.05"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<linearGradient id="smr-rim" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.42"/><stop offset="0.1" stop-color="#fff" stop-opacity="0"/><stop offset="0.86" stop-color="#0f4d36" stop-opacity="0"/><stop offset="1" stop-color="#0f4d36" stop-opacity="0.35"/></linearGradient>
+<clipPath id="smr-clip"><rect x="0" y="0" width="1600" height="900" rx="64"/></clipPath>
+<filter id="smr-amb" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="56"/></filter>
+<filter id="smr-sh" x="-50%" y="-50%" width="200%" height="200%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="20"/></filter>
+<linearGradient id="smr-obj" x1="0.1" y1="0.05" x2="0.9" y2="0.95"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e4f5e9"/></linearGradient>
+<linearGradient id="smr-core" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb35c"/><stop offset="1" stop-color="#ff6f45"/></linearGradient>
+</defs>
+<g id="plate"><rect x="0" y="0" width="1600" height="900" rx="64" fill="url(#smr-pl)"/><rect x="0" y="0" width="1600" height="900" rx="64" fill="url(#smr-plh)"/></g>
+<g id="ambient-shadow" clip-path="url(#smr-clip)"><ellipse cx="512" cy="760" rx="300" ry="130" fill="#0f4d36" opacity="0.34" filter="url(#smr-amb)" transform="translate(800 450) scale(1.15) translate(-512 -480)"/></g>
+<g id="object-shadow" clip-path="url(#smr-clip)" opacity="0.3" filter="url(#smr-sh)">
+ <g transform="translate(800 450) scale(1.15) translate(-512 -480) translate(10 24)" fill="#0f4d36">
+  <rect x="212" y="528" width="110" height="48" rx="24"/><rect x="702" y="528" width="110" height="48" rx="24"/>
+  <path d="M292 520H732V672Q732 768 636 768H388Q292 768 292 672Z"/>
+  <rect x="258" y="486" width="508" height="58" rx="29"/>
+  <g fill="none" stroke="#0f4d36" stroke-width="40" stroke-linecap="round">
+    <path d="M402 430C372 390 432 350 402 300S432 230 402 196" opacity="0.62"/>
+    <path d="M512 430C482 384 542 340 512 284S542 206 512 166"/>
+    <path d="M622 430C592 390 652 350 622 300S652 230 622 196" opacity="0.62"/>
+  </g>
+ </g>
+</g>
+<g id="object-main" transform="translate(800 450) scale(1.15) translate(-512 -480)">
+ <g fill="url(#smr-obj)">
+  <rect x="212" y="528" width="110" height="48" rx="24"/><rect x="702" y="528" width="110" height="48" rx="24"/>
+  <path d="M292 520H732V672Q732 768 636 768H388Q292 768 292 672Z"/>
+  <rect x="258" y="486" width="508" height="58" rx="29"/>
+ </g>
+  <rect x="292" y="600" width="440" height="44" fill="url(#smr-core)"/>
+  <g fill="none" stroke="url(#smr-obj)" stroke-width="40" stroke-linecap="round">
+    <path d="M402 430C372 390 432 350 402 300S432 230 402 196" opacity="0.62"/>
+    <path d="M512 430C482 384 542 340 512 284S542 206 512 166"/>
+    <path d="M622 430C592 390 652 350 622 300S652 230 622 196" opacity="0.62"/>
+  </g>
+</g>
+<g id="plate-rim" clip-path="url(#smr-clip)"><rect x="0" y="0" width="1600" height="900" rx="64" fill="none" stroke="url(#smr-rim)" stroke-width="8"/></g>
+</svg>

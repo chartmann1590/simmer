@@ -1,0 +1,44 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    name: Unit tests (Python ${{ matrix.python }})
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest
+      - run: python -m pytest -v tests/test_core.py tests/test_billing.py tests/test_promo.py tests/test_updates.py
+
+  community:
+    name: Community server
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: cd community && npm test
+
+  metadata:
+    name: Desktop file and manifest
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update && sudo apt-get install -y desktop-file-utils
+      - run: desktop-file-validate data/com.charleshartmann.Simmer.desktop
+      - run: python3 -m json.tool flatpak/com.charleshartmann.Simmer.json > /dev/null
+      - run: python3 -m json.tool flatpak/github/com.charleshartmann.Simmer.json > /dev/null

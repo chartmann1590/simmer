@@ -1,0 +1,6 @@
+{
+  "name": "simmer-community",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test test/moderate.test.mjs test/worker.test.mjs", "deploy": "bash deploy.sh" }
+}

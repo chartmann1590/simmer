@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.data/
+.cache/
+shots/
+build-dir/
+.flatpak-builder/
+node_modules/
+community/.wrangler/

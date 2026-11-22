@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1 (2026-11-21)
+
+- The selected sort in Recipes (Recent, A-Z, ...) was a blank white pill in dark mode. It reads in both themes now.
+- In a mid-size window the recipe page put the title in a narrow column beside the picture, so it broke mid-word
+  ("Chocol / te Chip") and ran past the edge. Below 900 px wide the picture now sits above the title.
+- Cook mode: with a timer running, the bar's timer row covered Previous / Next step and the keys hint. The page
+  keeps room for it.
+
 ## 1.0.0 (2026-11-19)
 
 The first release.

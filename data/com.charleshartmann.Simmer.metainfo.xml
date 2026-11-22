@@ -99,6 +99,7 @@
     <value key="org.projectluma.ApplicationContract">0.2</value>
   </custom>
   <releases>
+    <release version="1.0.1" date="2026-11-21"><description><p>Fixes: the selected sort is readable in dark mode, recipe titles no longer break mid-word in a mid-size window, and a running timer no longer covers the cook-mode step buttons.</p></description></release>
     <release version="1.0.0" date="2026-11-19">
       <description>
         <p>The first release: import from a link or pasted text, cook mode with step timers, scaling, the shopping list, favorites and tags, the community, and Simmer Plus (meal planner, smart shopping list, unit conversion and the cooking log).</p>

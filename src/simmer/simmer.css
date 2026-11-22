@@ -8,7 +8,9 @@
 .simmer-body { font-size: 15px; line-height: 1.55; }
 .simmer-link { padding: 2px 4px; min-height: 0; color: @luma_accent_link; font-weight: 600; }
 .simmer-chip { border-radius: 999px; padding: 4px 12px; font-weight: 600; min-height: 0; }
-.simmer-chip.active { background: @luma_ink; color: @luma_island; }
+/* Selected chip: @luma_island is nearly transparent in dark mode, so its text vanished; the window colour is always the opposite of ink. */
+.simmer-chip.active { background: @luma_ink; color: @window_bg_color; }
+.simmer-chip.active label { color: @window_bg_color; }
 .simmer-chip.big { padding: 10px 18px; font-size: 16px; }
 .simmer-sep { background: alpha(@luma_ink, 0.08); min-height: 1px; }
 .simmer-row { padding: 8px 6px; border-radius: 12px; font-weight: normal; }

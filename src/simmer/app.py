@@ -47,7 +47,7 @@ from .widgets import (  # noqa: E402
 
 APP_ID = "com.charleshartmann.Simmer"
 APP_NAME = "Simmer"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 PLACES = (("recipes", "Recipes", "book-open"), ("favorites", "Favorites", "heart"), ("plan", "This week", "calendar-days"),
           ("shopping", "Shopping list", "list-checks"), ("community", "Community", "users"),
           ("cooked", "Cooking log", "history"))
@@ -659,7 +659,10 @@ class Window(AppWindow):
                               primary=("All recipes", lambda: self.go("recipes")))
         phone = self.tier == "phone"
         content = []
-        top = Gtk.Box(orientation=Gtk.Orientation.VERTICAL if phone else Gtk.Orientation.HORIZONTAL, spacing=20,
+        # Picture beside the title only when the window is "regular" (over 900): in "compact" the sidebar leaves the
+        # title ~100 px beside a 320 px picture, so it broke mid-word ("Chocol / te Chip") and ran off the edge.
+        stacked = self.tier != "regular"
+        top = Gtk.Box(orientation=Gtk.Orientation.VERTICAL if stacked else Gtk.Orientation.HORIZONTAL, spacing=20,
                       margin_bottom=6)
         art_w = 320 if not phone else 300
         art = Art(r["title"], int(art_w * 0.75), radius=18, width=art_w)
@@ -997,7 +1000,9 @@ class Window(AppWindow):
         self._keep_awake(True)
         big = self.tv or self.tier != "phone"
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=14, margin_start=24, margin_end=24,
-                      margin_top=24 if self.tier != "phone" else 70, margin_bottom=150, valign=Gtk.Align.FILL)
+                      # 230, not 150: with a timer running the bar grows a row of timer chips (~60 px) and covered
+                      # Previous / Next step and the keys hint.
+                      margin_top=24 if self.tier != "phone" else 70, margin_bottom=230, valign=Gtk.Align.FILL)
         box.add_css_class("simmer-cook")
         if self.tv:
             box.add_css_class("tv")

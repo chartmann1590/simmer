@@ -3,7 +3,7 @@ schema_version = "0.2"
 [application]
 id = "com.charleshartmann.Simmer"
 name = "Simmer"
-version = "1.0.0"
+version = "1.0.1"
 entrypoint = "src/main.py"
 
 [platform]
